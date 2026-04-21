@@ -36,7 +36,7 @@ So far you've developed and tested your agent within a Foundry project. To take 
 A partially completed client application for your agent has been provided. You'll complete this app and test it with your agent endpoint.
 
 1. Open Visual Studio Code.
-1. Open the command palette (*Ctrl+Shift+P*) and use the `Git:clone` command to clone the `https://github.com/GraemeMalcolm/mslearn-first-agent` repo to a local folder (it doesn't matter which one). Then open it.
+1. Open the command palette (*Ctrl+Shift+P*) and use the `Git:clone` command to clone the `https://github.com/MicrosoftLearning/mslearn-agent-quickstart` repo to a local folder (it doesn't matter which one). Then open it.
 
     You may be prompted to confirm you trust the authors.
 
