@@ -83,7 +83,7 @@ To support specific use cases, you should use a *system prompt* to provide the m
 
 1. Now enter a new user prompt related to computing history, such as `What was Alan Turing's contribution to the development of AI?`
 
-    Review the response, which should provide some general guidance about expense claims.
+    Review the response, which should provide some history of computing information.
 
 1. Try asking an "off-topic" question, such as `What's the capital of Spain?`; and view the response.
 
