@@ -42,13 +42,16 @@ Now that you have a connection to your Foundry project, you can access the asset
 
 While you can use the graphical interface in the Foundry Portal and the Foundry Extension in Visual Studio code to develop and test an agent, eventually you'll want to write and test code. You can use the Azure AI Projects SDK and the OpenAI Responses API to do so.
 
+1. In the **Explorer** pane, open the folder in which you want to store your application files - creating a new folder named `computing-history` on your local disk.
+
+    You may be prompted to trust the owners of the folder.
+
 1. View the **Extensions** pane; and if it is not already installed, install the **Python** extension.
-1. In the **Explorer** pane, select the folder in which you want to store your application files, create a new folder named **computing-history**, and then select the new **computing-history** folder.
 1. In the **Command Palette (Ctrl+Shift+P)**, use the command `python:create environment` (or `python:select interpreter`) to create a new **Venv** environment based on your Python 3.1x installation.
 1. Select the **Explorer** pane, and confirm that a new folder named **.venv** has been created - this contains the runtime files for the Python environment you'll use for your application.
-1. In the **Explorer** pane, make sure the **computing-history** folder is selected and the **.venv** folder is <u>not</u> selected, and then add a new file named **agent.py**. This is the code file in which you'll write your Python code.
+1. In the **Explorer** pane, in the **computing-history** folder, add a new file named `agent.py`. This is the code file in which you'll write your Python code.
 1. Switch back to the **AI Toolkit** pane. Then right-click the latest version of the agent and select **View code**. Then when prompted, select the following options:
-    - **SDK**: Microsoft Foundry project client library
+    - **SDK**: Microsoft Foundry Projects client library
     - **Language**: Python
     - **Authentication**: Entra ID
 
@@ -95,7 +98,7 @@ While you can use the graphical interface in the Foundry Portal and the Foundry 
     pip install azure-ai-projects>=2.0.0 openai
     ```
 
-1. Use the following command to sign into Azure.
+1. After the libraries are installed, use the following command to sign into Azure.
 
     ```powershell
     az login
@@ -121,7 +124,7 @@ GitHub Copilot provides agentic AI assistance in Visual Studio Code, helping you
 > **Note**: GitHub Copilot in Visual Studio Code requires that you are signed in using a GitHub account. While agentic assistance is available in all GitHub plans, including free accounts, there are usage limitations.
 
 1. In Visual Studio Code, in the **Extensions** pane, ensure that the **GitHub Copilot Chat** extension is installed and enabled.
-1. At the bottom of the activity bar on the left, select **Accounts** and ensure that you are signed into your GitHub account. If not, use the **Manage Extension Account Preferences** option to set up the GitHub Copilot Chat extension to use your GitHub account.
+1. At the bottom of the activity bar on the left, select **Accounts** and ensure that you are signed into your GitHub account. If not, sign in to use AI features.
 1. On the toolbar, next to the search box, use the **Toggle Chat** button to show the chat pane on the right.
 
     ![Screenshot of GitHub Copilot in Visual Studio Code.](./media/vscode-github-copilot.png)
