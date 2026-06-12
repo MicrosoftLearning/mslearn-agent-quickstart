@@ -8,7 +8,7 @@ Welcome to the labs for *Develop your first agent with Microsoft Foundry*!
 
 Complete the exercises below in order, to set up your environment, create an agent in the Microsoft Foundry portal, extend your agent in Visual Studio Code, and use your agent's endpont in a client application.
 
-> **Note**: Microsoft Foundry is built on Microaoft Azure. If you don't have access to an Azure subscription, but you want to explore key elements of agent development, you can check out the **[Fallback alternative lab - Explore agent concepts](/Instructions/fallback/99-fallback-lab.md)**; which uses apps with large language models that run locally in your browser.
+> **Note**: Microsoft Foundry is built on Microsoft Azure. If you don't have access to an Azure subscription, but you want to explore key elements of agent development, you can check out the **[Fallback alternative lab - Explore agent concepts](/Instructions/fallback/99-fallback-lab.md)**; which uses apps with large language models that run locally in your browser.
 
 ## Exercises
 
