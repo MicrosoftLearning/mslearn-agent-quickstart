@@ -13,7 +13,7 @@ Complete the exercises below in order, to:
 1. Extend your agent in Visual Studio Code
 1. Use your agent's endpont in a client application.
 
-> **Note**: Microsoft Foundry is built on Microsoft Azure. If you don't have access to an Azure subscription, but you want to explore key elements of agent development, you can check out the **[Fallback alternative lab - Explore agent concepts](/Instructions/fallback/99-fallback-lab.md)**; which uses apps with large language models that run locally in your browser.
+> **No Azure Subscription?**<br>Microsoft Foundry is built on Microsoft Azure; so the exercises in this lab require an Azure subscription. If you don't have access to an Azure subscription, but you still want to explore key elements of agent development, you can check out the fallback alternative **[Explore agent concepts](/Instructions/fallback/99-fallback-lab.md)** lab; which uses apps with large language models that run locally in your browser - no Azure subscription required!
 
 ## Exercises
 

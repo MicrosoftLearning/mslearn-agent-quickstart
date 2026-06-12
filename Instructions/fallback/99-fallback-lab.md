@@ -185,6 +185,10 @@ Now that you've explored the fundamental building blocks of how agent's are buil
 
     ![Screenshot of the computing history agent with a chat response.](./media/computing-history-response.png)
 
+1. Try another prompt, like `Find the latest news for vintage computer enthusiasts.`
+
+    Your agent should use its knowledge and tools to provide useful information and insights into computing history related topics.
+
 ## Summary
 
 In this exercise, you explored key elements of AI agents, including large language models, instructions, tools, and client applications.

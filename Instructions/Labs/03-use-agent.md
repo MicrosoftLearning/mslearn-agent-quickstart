@@ -135,6 +135,10 @@ Now you're ready to test the app with your agent.
 
 1. Enter a prompt, such as `What was ENIAC?` and view the response.
 1. Follow up with a second prompt, such as `How does it compare with COLOSSUS?`
+1. Try more prompts, like `Find the latest news for vintage computer enthusiasts.`
+
+    Your agent should use its knowledge and tools to provide useful information and insights into computing history related topics.
+
 1. When you're finished testing the app, in the terminal pane, enter **CTRL+C** to stop the local web server.
 
 ## Summary
