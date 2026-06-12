@@ -24,4 +24,4 @@ Before you start, you will need:
 
 When you have everything ready to go, move on to the **[first exercise](./01-get-started-in-foundry.md)**.
 
-> **Tip**: If you don't have access to an Azure subscription, but you want to explore key elements of agent development, you can check out the [Fallback alternative lab - Explore agent concepts](./99-fallback-lab.md); which uses apps with large language models that run locally in your browser.
+> **Tip**: If you don't have access to an Azure subscription, but you want to explore key elements of agent development, you can check out the [Fallback alternative lab - Explore agent concepts](../fallback/99-fallback-lab.md); which uses apps with large language models that run locally in your browser.
