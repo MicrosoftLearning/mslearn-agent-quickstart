@@ -4,7 +4,7 @@ lab:
   description: Use your published agent in a client application.
   level: 200
   duration: 20 minutes
-  islab: false
+  islab: true
 ---
 
 # Use your agent in a client application
