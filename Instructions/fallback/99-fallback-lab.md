@@ -38,7 +38,7 @@ To cha with the model, we'll use an interactive *chat playground* that provides 
 1. In a web browser, open the **[Chat Playground](https://aka.ms/chat-playground){:target="_blank"}** at `https://aka.ms/chat-playground`.
 1. Wait for the model to download and initialize.
 
-    > **Tip**: The first time you download a model, it may take a few minutes. Subsequent downloads will be faster. If your browser or operating system does not support WebGPU models, the fallback CPU-based model will be selected (which provides slower performance and reduced quality of response generations). If *that* fails, the basic mode in which responses are retrieved from Wikipedia is used.
+    > **Tip**: The first time you download a model, it may take a few minutes. Subsequent downloads will be faster. If your browser or operating system does not support WebGPU models, the fallback CPU-based model will be selected (which provides slower performance and reduced quality of response generations). If *that* fails, the basic mode in which responses are retrieved from Wikipedia is used.<br><br>If the model is taking a long time to load, you can cancel and start in basic mode. You can switch between available models at any time in the *Model* list.
 
 1. When the model is ready, review the playground interface, which should look similar to this.
 
@@ -175,7 +175,7 @@ Now that you've explored the fundamental building blocks of how agent's are buil
 
 1. Navigate away from the Model Coder app to the **[Computing History agent](https://aka.ms/computing-history-browser){:target="_blank"}** at `https://aka.ms/computing-history-browser`.
 
-    > **Note**: The first time you download a model, it may take several minutes. Subsequent downloads will be faster.<br><br>By default, the browser-based app uses the Microsoft Phi 3.5-mini model running in WebLLM (via WebGPU). When a GPU is unavailable, the app uses a fallback mode with the Phi 3.1-mini model running in the wllama CPU-based engine. If that fails, then a **Basic** mode with no large language model is used.<br><br>If the model is taking a long time to load, you can cancel and start in Basic mode. You can switch between available modes at any time in the main application user interface.
+    > **Note**: The first time you download a model, it may take several minutes. Subsequent downloads will be faster.<br><br>By default, the browser-based app uses the Microsoft Phi 3.5-mini model running in WebLLM (via WebGPU). When a GPU is unavailable, the app uses a fallback mode with the Phi 3.1-mini model running in the wllama CPU-based engine. If *that* fails, then a Basic mode with no large language model is used.<br><br>If the model is taking a long time to load, you can cancel and start in Basic mode. You can switch between available modes at any time in the main application user interface.
 
     After loading, the application should look similar to this:
 
