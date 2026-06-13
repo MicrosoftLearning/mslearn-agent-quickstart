@@ -75,7 +75,7 @@ To support specific use cases, you should use a *system prompt* to provide the m
 
     Review the response, which should provide some relevant information.
 
-## Add a web_search tool
+## Add a web search tool
 
 So far, the model has answered questions based on the data with which it was trained. While this is useful, that leaves out a lot of current information on the web; which might help the model give more relevant answers.
 
