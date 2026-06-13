@@ -31,7 +31,7 @@ This exercise should take approximately **30** minutes to complete.
 
 Let's start by using a chat interface to submit prompts to a generative AI model. In this exercise, we'll use a small language model that is useful for general chat solutions in low bandwidth scenarios.
 
-To cha with the model, we'll use an interactive *chat playground* that provides a similar interface to the Microsoft Foundry portal.
+To chat with the model, we'll use an interactive *chat playground* that provides a similar interface to the Microsoft Foundry portal.
 
 > **Note**: If your browser supports WebGPU, the chat playground uses the *Microsoft Phi 3.5 Mini* model running on your computer's GPU. If not, the *Microsoft Phi 2* model is used, running on CPU - with reduced response-generation quality. Performance for either model may vary depending on the available memory in your computer and your network bandwidth to download the model. On older or low-spec devices, you may get more reliable behavior by switching to the *None* model even if CPU or GPU is available. After opening the app, use the **?** (*About this app*) icon in the chat area to find out more.
 
