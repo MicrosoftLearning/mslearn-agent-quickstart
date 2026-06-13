@@ -171,7 +171,7 @@ One of the most commonly used application programming interfaces (APIs) used to 
 
 ## Use an agent
 
-Now that you've explored the fundamental building blocks of how agent's are built from models, instructions, and tools; and how applicatio developers can write code to submit prompts to models and agents, it's time to see how all of this can come together in an agentic application.
+Now that you've explored the fundamental building blocks of how agent's are built from models, instructions, and tools; and how application developers can write code to submit prompts to models and agents, it's time to see how all of this can come together in an agentic application.
 
 1. Navigate away from the Model Coder app to the **[Computing History agent](https://aka.ms/computing-history-browser){:target="_blank"}** at `https://aka.ms/computing-history-browser`.
 
