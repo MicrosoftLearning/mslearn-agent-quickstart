@@ -1,6 +1,8 @@
 # Develop your first agent with Microsoft Foundry
 
-This repo contains exercises and supporting files for skilling content on [Microsoft AI Skills Navigator](https://aiskillsnavigator.microsoft.com/playlists/ceb4e15f-0793-4389-ad02-c7c778d16b2c)
+This repo contains exercises and supporting files for skilling content on [Microsoft AI Skills Navigator](https://aiskillsnavigator.microsoft.com/playlists/ceb4e15f-0793-4389-ad02-c7c778d16b2c).
+
+For the best experience, view the labs in the [*GitHub Pages* site](https://microsoftlearning.github.io/mslearn-agent-quickstart/) for this repo.
 
 > **Note**: The labs in this repo require an Azure subscription.
 
