@@ -27,7 +27,7 @@ So far you've developed and tested your agent within a Foundry project. To take 
 
     > **Tip**: Do <u>not</u> publish your agent to Teams and Microsoft 365 in ths exercise.
 
-### Configure a client application in Visual Studio Code
+## Configure a client application in Visual Studio Code
 
 A partially completed client application for your agent has been provided. You'll complete this app and test it with your agent endpoint.
 
@@ -64,7 +64,7 @@ A partially completed client application for your agent has been provided. You'l
 
 1. Save the updated **.env** file.
 
-### Add code to interact with your agent
+## Add code to interact with your agent
 
 Now you're ready to implement the code that will submit prompts to your agent.
 
@@ -108,7 +108,7 @@ Now you're ready to implement the code that will submit prompts to your agent.
 1. Read through the rest of the code, using the comments to understand the technique of tracking user inputs and responses in a conversation history.
 1. Save the updated **agent_client.py** file.
 
-### Run the client application
+## Run the client application
 
 Now you're ready to test the app with your agent.
 
