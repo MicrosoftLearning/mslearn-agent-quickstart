@@ -21,7 +21,7 @@ This exercise should take approximately **20** minutes to complete.
 
 So far you've developed and tested your agent within a Foundry project. To take it into production, you need to write code that consumes it from its dedicated endpoint.
 
-1. If you don;t already have it open; in a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and sign in using your Azure credentials. Then switch to the **New Foundry** view if necessary, and open the project in which you created the *computing-historian* agent.
+1. If you don't already have it open; in a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and sign in using your Azure credentials. Then switch to the **New Foundry** view if necessary, and open the project in which you created the *computing-historian* agent.
 1. Select the **Build** menu, and in the **Agents** page, select the **computing-historian** agent.
 1. In the **Publish** drop-down list, view the published agent **Details**. In particular, note the **Responses** protocol endpoint that clients apps can use to call your agent via the OpenAI Responses API. You'll need this later!
 
