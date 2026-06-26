@@ -13,15 +13,18 @@ If you don't have access to an Azure subscription, but you want to get hands-on 
 
 In this exercise, you'll use real large language models that run locally in your browser to explore how AI agents work and can be used to power intelligent solutions.
 
+> **Note**: The apps used in this lab are provided solely for educational purposes. They are <u>not</u> supported Microsoft products or services, and should not be relied on for critical work.
+
 To complete this exercise, you need a modern browser on a computer with sufficient hardware resources to load and run the models. On older or low-spec computers, the apps may run very slowly or experience errors.
 
 > **Minimum recommended spec**<br>
 >
-> - 64-bit CPU, 4+ physical cores (8 logical threads preferred)
-> - GPU required for the default Phi 3.5-mini model.
+> - 64-bit CPU, 8 cores
+> - GPU (recommended)
 > - 8+ GB system RAM (16 GB recommended)
 > - Enough storage to cache ~300MB–800MB model assets
-> - Latest Chrome / Edge / Firefox with WASM SIMD enabled/available (WebGPU support is required for the default model; a WASM-based fallback is provided)
+> - Latest Chrome / Edge / Firefox with WASM SIMD enabled/available (WebGPU support is recommended; a WASM-based fallback is provided)
+> - Audio hardware (mic and speaker) required for speech functionality
 
 If your computer does not meet these requirements, the AI models may not run successfully. However, the apps do support a failsafe "Basic" mode in which no model is used; which you may be able to use.
 
@@ -33,12 +36,12 @@ Let's start by using a chat interface to submit prompts to a generative AI model
 
 To chat with the model, we'll use an interactive *chat playground* that provides a similar interface to the Microsoft Foundry portal.
 
-> **Note**: If your browser supports WebGPU, the chat playground uses the *Microsoft Phi 3.5 Mini* model running on your computer's GPU. If not, the *Microsoft Phi 2* model is used, running on CPU - with reduced response-generation quality. Performance for either model may vary depending on the available memory in your computer and your network bandwidth to download the model. On older or low-spec devices, you may get more reliable behavior by switching to the *None* model even if CPU or GPU is available. After opening the app, use the **?** (*About this app*) icon in the chat area to find out more.
+> **Note**: If your browser supports WebGPU, the chat playground uses the *Microsoft Phi 3.5 Mini* model running on your computer's GPU. If not, the model run on CPU - with reduced response-generation quality. If *that* fails, a basic mode with no model and responses retrieved from Wikipedia is activated. Performance may vary depending on the available memory in your computer and your network bandwidth to download the model. After opening the app, use the **?** (*About this app*) icon in the chat area to find out more.
 
 1. In a web browser, open the **[Chat Playground](https://aka.ms/chat-playground){:target="_blank"}** at `https://aka.ms/chat-playground`.
 1. Wait for the model to download and initialize.
 
-    > **Tip**: The first time you download a model, it may take a few minutes. Subsequent downloads will be faster. If your browser or operating system does not support WebGPU models, the fallback CPU-based model will be selected (which provides slower performance and reduced quality of response generations). If *that* fails, the basic mode in which responses are retrieved from Wikipedia is used.<br><br>If the model is taking a long time to load, you can cancel and start in basic mode. You can switch between available models at any time in the *Model* list.
+    > **Tip**: The first time you download a model, it may take a few minutes. Subsequent downloads will be faster.<br><br>If the model is taking a long time to load, you can cancel and start in basic mode. You can switch between available models at any time in the *Model* list.
 
 1. When the model is ready, review the playground interface, which should look similar to this.
 
@@ -54,7 +57,7 @@ To chat with the model, we'll use an interactive *chat playground* that provides
 
     ![Screenshot of the chat playground app with a response.](./media/chat-playground-response.png)
 
-    >**Note**: Generative AI chat applications often include the conversation history in the prompt; so the context of the conversation is retained between messages. In this case, "her" is interpreted as referring to Ada Lovelace.
+    >**Note**: Generative AI chat applications often include chat history in the prompt; so the context of the conversation is retained between messages (for example, in the follow-up prompt `Tell me more about her work with Charles Babbage.`, "her" is interpreted as referring to Ada Lovelace).<br><br>In *Basic* mode, the conversation history is not retained; so the follow up prompt results in a new Wikipedia query based on the keywords "Charles Babbage".
 
 1. At the top-right of the chat pane, use the **New chat** (💬) button to restart the conversation. This removes all conversation history.
 1. Enter a new prompt, such as `Tell me about the ELIZA chatbot.` and view the response.
@@ -95,7 +98,7 @@ One of the most commonly used application programming interfaces (APIs) used to 
 
 1. Navigate away from the Chat Playground app to the **[Model Coder](https://aka.ms/model-coder){:target="_blank"}** app at `https://aka.ms/model-coder` and wait for the Python environment and model to load.
 
-    > **Note**: As with the chat playground, the first time the model is loaded it may take a minute or so. If your browser supports WebGPU, the Microsoft Phi 3.5-mini model will be loaded using the WebLLM engine. Otherwise, the Phi 2 model will be used in wllama, running in CPU mode. If *that* fails, the basic mode in which responses are retrieved from Wikipedia is used.<br><br>If the model is taking a long time to load, you can cancel and start in basic mode. You can switch between available models at any time in the *Mode* list.
+    > **Note**: As with the chat playground, the first time the model is loaded it may take a minute or so. <br><br>If the model is taking a long time to load, you can cancel and start in basic mode. You can switch between available models at any time in the *Mode* list.
 
     ![Screenshot of Model Coder](./media/model-coder.png)
 
@@ -175,7 +178,7 @@ Now that you've explored the fundamental building blocks of how agent's are buil
 
 1. Navigate away from the Model Coder app to the **[Computing History agent](https://aka.ms/computing-history-browser){:target="_blank"}** at `https://aka.ms/computing-history-browser`.
 
-    > **Note**: The first time you download a model, it may take several minutes. Subsequent downloads will be faster.<br><br>By default, the browser-based app uses the Microsoft Phi 3.5-mini model running in WebLLM (via WebGPU). When a GPU is unavailable, the app uses a fallback mode with the Phi 3.1-mini model running in the wllama CPU-based engine. If *that* fails, then a Basic mode with no large language model is used.<br><br>If the model is taking a long time to load, you can cancel and start in Basic mode. You can switch between available modes at any time in the main application user interface.
+    > **Note**: If your browser supports WebGPU, the Computing History Agent uses the *Microsoft Phi 3.5 Mini* model running on your computer's GPU. If not, the model run on CPU - with reduced response-generation quality. If *that* fails, a basic mode with no model and responses retrieved from Wikipedia is activated. Performance may vary depending on the available memory in your computer and your network bandwidth to download the model.<br><br>When the model is used on older or low-spec devices, you may experience slow performance. If this happens, switch to *Basic* mode.
 
     After loading, the application should look similar to this:
 
@@ -197,4 +200,4 @@ In this exercise, you explored key elements of AI agents, including large langua
 
 If you want to learn more about the core concepts of AI and agents, check out the [AI concepts for developers and technology professionals](https://aiskillsnavigator.microsoft.com/explore/search/learningpath-64735f4d575e2684eefd5b9e24b2b9d7b4126931707290aa539166a63501f4d6){:target="_blank"} learnng path on AI Skills Navigator.
 
-> **[Ask Anton](https://aka.ms/ask-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/ask-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just a sample AI agent for you to explore as you learn about what's possible with AI.*<br/><br/>If you *do* check out Ask Anton, we'd love you to *[tell us about your experience](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}*!
+> **[Ask Anton](https://aka.ms/ask-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/ask-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just a sample AI agent for you to explore as you learn about what's possible with AI.*<br/><br/>If you *do* check out Ask Anton, we'd love you to *[tell us about your experience with the app](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}*!

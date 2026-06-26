@@ -15,6 +15,10 @@ In this exercise, you'll use Microsoft Foundry to start developing an AI agent t
 
 This exercise should take approximately **20** minutes to complete.
 
+## Before you start
+
+Ensure you have a suitable environment in which to complete this lab. Use the **[setup guide](./00-setup.md)** to prepare your environment.
+
 ## Create a Microsoft Foundry project
 
 Microsoft Foundry uses *projects* to organize models, resources, data, and other assets used to develop an AI solution.
