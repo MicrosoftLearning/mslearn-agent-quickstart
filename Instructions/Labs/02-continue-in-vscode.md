@@ -29,7 +29,7 @@ The Foundry Toolkit extension for Visual Studio Code brings the assets in your F
 
     ![Screenshot of the Foundry Toolkit Visual Studio Code extension.](./media/foundry-vs-extension.png)
 
-1. In the Foundry Toolkit pane, expand **Microsoft Foundry Resources** and set the default project by connecting to Azure (signing in with your credentials) and selecting the Foundry project you created previously.
+1. In the Foundry Toolkit pane, expand **My Resources** and set the default project by connecting to Azure (signing in with your credentials) and selecting the Foundry project you created previously.
 
     > **Tip**: If you did not complete the previous exercise, use the extension to sign into Azure and create a new project.
 
