@@ -35,13 +35,13 @@ The Foundry Toolkit extension for Visual Studio Code brings the assets in your F
 
 ## Connect to your agent
 
-Now that you have a connection to your Foundry project, you can access the assets you've created in it - including the *computing-history* agent you created in the previous exercise.
+Now that you have a connection to your Foundry project, you can access the assets you've created in it - including the *computing-historian* agent you created in the previous exercise.
 
-> **Tip**: If you didn't complete the previous exercise, or have deleted your *computing-history* agent, use the **+** icon for the **Prompt agents** node to create a new agent named `computing-history` based on the *gpt-4.1-mini* model with the instructions `You are an expert in the history of computing and AI.` and add the *Web search* tool.
+> **Tip**: If you didn't complete the previous exercise, or have deleted your *computing-history* agent, use the **+** icon for the **Prompt agents** node to create a new agent named `computing-history` based on the *gpt-5-mini* model with the instructions `You are an expert in the history of computing and AI.` and add the *Web search* tool.
 
-1. In the Foundry Toolkit pane, under your project, expand **Prompt agents**, expand select the **computing-history** agent you created previously, and select the version 1 implementation of the agent (or the latest version if you saved additional changes in the Foundry portal).
+1. In the Foundry Toolkit pane, under your project, select **Agents** and on the **Prompt agents** tab, select the **computing-historian** agent you created previously.
 
-    The agent is opened in the **Agent Builder** interface within Visual Studio Code, so you can continue to develop and test it.
+    The latest version of the agent is opened in the **Agent Builder** interface within Visual Studio Code, so you can continue to develop and test it.
 
     ![Screenshot of the Agent Builder in Visual Studio Code.](./media/vs-code-playground.png)
 
@@ -49,64 +49,101 @@ Now that you have a connection to your Foundry project, you can access the asset
 
 While you can use the graphical interface in the Foundry Portal and the Foundry Extension in Visual Studio code to develop and test an agent, eventually you'll want to write and test code. You can use the Azure AI Projects SDK and the OpenAI Responses API to do so.
 
-1. In the **Explorer** pane, open the folder in which you want to store your application files - creating a new folder named `computing-history` on your local disk.
+1. In the **Agent Builder** pane, and select **View code**. Then when prompted, browse to the location on your local drive where you want to store your agent code.
 
-    You may be prompted to trust the owners of the folder.
+    A new Visual Studio Code instance is opened, containing code files to work with your agent.
 
-1. View the **Extensions** pane; and if it is not already installed, install the **Python** extension.
-1. In the **Command Palette (Ctrl+Shift+P)**, use the command `python:create environment` (or `python:select interpreter`) to create a new **Venv** environment based on your Python 3.1x installation.
-1. Select the **Explorer** pane, and confirm that a new folder named **.venv** has been created in the **computing-history** root folder - this contains the runtime files for the Python environment you'll use for your application.
-1. In the **Explorer** pane, in the **computing-history** folder, add a new file named `agent.py`. This is the code file in which you'll write your Python code.
-1. Switch back to the **Foundry Toolkit** pane. Then right-click the latest version of the agent and select **View code**. Then when prompted, select the following options:
-    - **SDK**: Microsoft Foundry Projects client library
-    - **Language**: Python
-    - **Authentication**: Entra ID
-
-    A sample code file to connect to your agent and submit a prompt is opened. The code should look similar to this:
+1. In the new Visual Studio Code workspace, select the **run_agent.py** code file. The code it contains should look similar to this:
 
     ```python
-   # Before running the sample
-   # pip install azure-ai-projects>=2.0.0
+    """Build Agent using Microsoft Agent Framework in Python
     
-   from azure.identity import DefaultAzureCredential
-   from azure.ai.projects import AIProjectClient
+    # Run this python script
+    >
+    > pip install agent-framework==1.0.0rc6
+    > python <this-script-path>.py
+    """
     
-   my_endpoint = "https://{your_foundry_resource}.services.ai.azure.com/api/projects/{your_project}"
+    import asyncio
+    import os
+    from dotenv import load_dotenv
     
-   project_client = AIProjectClient(
-        endpoint=my_endpoint,
-        credential=DefaultAzureCredential(),
-   )
+    from agent_framework_foundry import FoundryAgent
+    from azure.identity.aio import DefaultAzureCredential
     
-   my_agent = "computing-historian"
-   my_version = "1"
+    load_dotenv()
     
-   openai_client = project_client.get_openai_client()
+    # User inputs for the conversation
     
-   # Reference the agent to get a response
+    USER_INPUTS = [
+        "Hello",
+    ]
     
-   response = openai_client.responses.create(
-        input=[{"role": "user", "content": "Tell me what you can help with."}],
-        extra_body={"agent_reference": {"name": my_agent, "version": my_version, "type": "agent_reference"}},
-   )
+    async def main() -> None:
+        # For authentication, DefaultAzureCredential supports multiple authentication methods. Run `az login` in terminal for Azure CLI auth.
+        async with FoundryAgent(
+            project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+            agent_name="computing-historian",
+            agent_version="1",
+            credential=DefaultAzureCredential(),
+        ) as agent:
     
-   print(f"Response output: {response.output_text}")
+            # Process user messages
+            for user_input in USER_INPUTS:
+                print(f"\n# User: '{user_input}'")
+                printed_tool_calls = set()
+                async for chunk in agent.run(user_input, stream=True):
+                    # log tool calls if any
+                    function_calls = [
+                        c for c in chunk.contents
+                        if c.type == "function_call"
+                    ]
+                    for call in function_calls:
+                        if call.call_id not in printed_tool_calls:
+                            print(f"Tool calls: {call.name}")
+                            printed_tool_calls.add(call.call_id)
+                    if chunk.text:
+                        print(chunk.text, end="", flush=True)
+                print("")
+    
+            print("\n--- All tasks completed successfully ---")
+    
+    if **name** == "**main**":
+        try:
+            asyncio.run(main())
+        except KeyboardInterrupt:
+            print("\nProgram interrupted by user")
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+            import traceback
+            traceback.print_exc()
+        finally:
+            print("Program finished.")
     ```
 
-1. Copy and paste the code into your **agent.py** code file. Then close the sample code tab.
-1. Save the changes to the **agent.py** file. in the **Explorer** pane, right-click the **agent.py** file, and select **Open in integrated terminal**.
+    Note the comments at the top of the file, which provide instructions for preparing the Python environment and running the script.
+
+1. On the **Extensions** page, if it is not already installed, install the **Python** extension. Then, in the **Command Palette (Ctrl+Shift+P)**, use the command `python:create environment` (or `python:select interpreter`) to create a new *Venv* environment based on your Python 3.1x installation.
+
+    > **Tip**: You can choose to install the workspace dependencies in the *requirements.txt* file as you create the environment. Don't worry of you accidentally skip this though; we'll do it in a later step anyway.
+
+    When you have created the Python environment, a folder mamed **.venv** will be added to the workspace (not to be confused with the *.env* file, which contains environment variables for the program)
+
+1. In the **Explorer** pane, right-click the **run_agent.py** file, and select **Open in integrated terminal**.
 
     > **Note**: Opening the terminal in Visual Studio Code should automatically activate the Python environment after a few seconds. If you're using a PowerShell terminal, you may need to enable running scripts on your system (see [Set-ExecutionPolicy](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy){:target="_blank"}). If for any reason the Python environment is not activated automatically, you can use [this query](https://www.bing.com/search?q=%22How%20do%20I%20activate%20a%20Python%20venv%22){:target="_blank"} to search for information on how to activate it in your environment.
 
-1. Ensure that the terminal is open in the **computing-history** folder with the prefix **(.venv)** to indicate that the Python environment you created is active.
+1. Ensure that the terminal is open in the **computinghistorian** folder with the prefix **(.venv)** to indicate that the Python environment you created is active.
 
     > **Tip**: You can enter the command `cls` to clear the console pane - which may make it easier to focus on the outputs from commands as you run them.
 
-1. Install the Azure AI projects and OpenAI SDKs by running the following command:
+1. Install the required dependencies by running the following command:
 
     ```bash
-   pip install azure-ai-projects>=2.0.0 openai
+   pip install agent-framework==1.10.0
     ```
+
+    **Nte**: This may be a different version from the one referenced in the same code and requirements.txt file.
 
 1. After the libraries are installed (which may take a minute or so), use the following command to sign into Azure.
 
@@ -120,10 +157,10 @@ While you can use the graphical interface in the Foundry Portal and the Foundry 
 1. After you have signed in, enter the following command to run the application:
 
     ```bash
-   python agent.py
+   python run_agent.py
     ```
 
-    The code should run in the terminal, submit the prompt "*Tell me what you can help with.*" to your agent, and display the response (if not, resolve any errors and try again).
+    The code should run in the terminal, submit the user prompt "*Hello*" to your agent, and display the response (if not, resolve any errors and try again).
 
     ![Screenshot of a terminal with code output in Visual Studio Code.](./media/vs-code-run-agent.png)
 
@@ -167,7 +204,7 @@ GitHub Copilot provides agentic AI assistance in Visual Studio Code, helping you
 
 ## Summary
 
-In this exercise, you used the Foundry Toolkit extension in Visual Studio Code and the Azure AI Projects SDK to develop an agentic solution. You also used GitHub Copilot to get agentic AI assistance when developing your solution.
+In this exercise, you used the Foundry Toolkit extension in Visual Studio Code and the Agent Framework to develop an agentic solution. You also used GitHub Copilot to get agentic AI assistance when developing your solution.
 
 ## Next steps
 

@@ -49,9 +49,9 @@ At the heart of every AI agent, there's a large language model (LLM). Let's find
 
     ![Screenshot of the AI Foundry model catalog.](./media/0-foundry-models.png)
 
-1. Search for and select the `gpt-4.1-mini` model, and view the page for this model, which describes its features and capabilities.
+1. Search for and select the `gpt-5-mini` model, and view the page for this model, which describes its features and capabilities.
 
-    ![Screenshot of the gpt-4.1-mini model page.](./media/0-gpt-4.1-mini.png)
+    ![Screenshot of the gpt-5-mini model page.](./media/gpt-5-mini.png)
 
 1. Use the **Deploy** button to deploy the model using the default settings. Deployment may take a minute or so.
 
@@ -128,22 +128,24 @@ While you can implement generative AI apps using a standalone model, to create a
     name: computing-historian
     version: "1"
     description: ""
-    created_at: 1776550090
+    created_at: 1782917197
     definition:
       kind: prompt
-      model: gpt-4.1-mini
-      instructions: You are an expert in the history of
-        computing and AI. You only answer questions
-        about significant people and events in the
-        development of computing, and about notable
-        vintage computers. Do not engage in
-        conversations on any topic that is unrelated to
-        computing history.
-      temperature: 1
-      top_p: 1
+      model: gpt-5-mini
+      instructions: You are an expert in the history of computing and AI. You only answer questions about significant people and events in the development of computing, and about notable vintage computers. Do not engage in conversations on any topic that is unrelated to computing history.
       tools:
         - type: web_search
     status: active
+    instance_identity:
+      principal_id: c51143c7-2c5e-4d70-a7c1-759539926623
+      client_id: c51143c7-2c5e-4d70-a7c1-759539926623
+    blueprint:
+      principal_id: 3a9a2794-b482-42f9-8b52-f7c0f80d2520
+      client_id: e70779c8-c3ce-49c6-8ca6-8ea5037e9738
+    blueprint_reference:
+      type: ManagedAgentIdentityBlueprint
+      blueprint_id: computing-historian-13bf1
+    agent_guid: 13bf1394-7dfe-4c03-94b7-3e81a168d770
     ```
 
 1. Switch back to the **Chat** tab, and enter the prompt `Who are you?`

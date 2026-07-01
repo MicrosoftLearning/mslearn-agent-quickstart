@@ -23,9 +23,7 @@ So far you've developed and tested your agent within a Foundry project. To take 
 
 1. If you don't already have it open; in a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and sign in using your Azure credentials. Then switch to the **New Foundry** view if necessary, and open the project in which you created the *computing-historian* agent.
 1. Select the **Build** menu, and in the **Agents** page, select the **computing-historian** agent.
-1. In the **Publish** drop-down list, view the published agent **Details**. In particular, note the **Responses** protocol endpoint that clients apps can use to call your agent via the OpenAI Responses API. You'll need this later!
-
-    > **Tip**: Do <u>not</u> publish your agent to Teams and Microsoft 365 in ths exercise.
+1. In the **computing-historian** agent page, view the **Details** tab. In particular, note the **Responses** protocol endpoint that clients apps can use to call your agent via the OpenAI Responses API. You'll need this later!
 
 ## Configure a client application in Visual Studio Code
 
@@ -127,7 +125,7 @@ Now you're ready to test the app with your agent.
    python app.py
     ```
 
-1. When the Flask application starts, open your browser and navigate to [http://localhost:5000](http://localhost:5000) (`http://localhost:5000`).
+1. When the Flask application starts, open your browser and navigate to the URL where it is running - for example, [http://127.0.0.1:5000](http://127.0.0.1:5000) (`http://127.0.0.1:5000`).
 
     The application web site should look like this:
 
