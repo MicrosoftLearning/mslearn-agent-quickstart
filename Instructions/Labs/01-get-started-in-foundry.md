@@ -9,7 +9,7 @@ lab:
 
 # Develop your first AI agent in Microsoft Foundry
 
-In this lab, you'll use Microsoft Foundry to start developing an AI agent that provides information and expertise on the history of computing.
+In this lab, you'll use Microsoft Foundry to develop an AI agent that provides information and expertise on the history of computing.
 
 > **Note**: Many components of Microsoft Foundry, including the Microsoft Foundry portal, are subject to continual development. This reflects the fast-moving nature of artificial intelligence technology. Some elements of your user experience may differ from the images and descriptions in this exercise!
 
