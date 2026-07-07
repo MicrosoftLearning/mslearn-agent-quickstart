@@ -1,6 +1,6 @@
 ---
 lab:
-  title: Fallback alternative lab - Explore agent concepts
+  title: Alternative lab - Explore agent concepts
   description: No cloud subscription? Explore key agent development concepts in your browser.
   level: 100
   duration: 30 minutes
@@ -196,8 +196,8 @@ Now that you've explored the fundamental building blocks of how agent's are buil
 
 In this exercise, you explored key elements of AI agents, including large language models, instructions, tools, and client applications.
 
+> **[Ask Anton](https://aka.ms/ask-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/ask-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just a sample AI agent for you to explore as you learn about what's possible with AI.*<br/><br/>If you *do* check out Ask Anton, we'd love you to *[tell us about your experience with the app](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}*!
+
 ## Next steps
 
-If you want to learn more about the core concepts of AI and agents, check out the [AI concepts for developers and technology professionals](https://aiskillsnavigator.microsoft.com/explore/search/learningpath-64735f4d575e2684eefd5b9e24b2b9d7b4126931707290aa539166a63501f4d6){:target="_blank"} learnng path on AI Skills Navigator.
-
-> **[Ask Anton](https://aka.ms/ask-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/ask-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just a sample AI agent for you to explore as you learn about what's possible with AI.*<br/><br/>If you *do* check out Ask Anton, we'd love you to *[tell us about your experience with the app](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}*!
+If you want to learn more about the core concepts of AI and agents, check out [AI concepts for developers and technology professionals](https://aiskillsnavigator.microsoft.com/explore/search/learningpath-64735f4d575e2684eefd5b9e24b2b9d7b4126931707290aa539166a63501f4d6){:target="_blank"} on AI Skills Navigator.

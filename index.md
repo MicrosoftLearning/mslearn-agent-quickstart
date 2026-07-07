@@ -4,16 +4,11 @@ permalink: index.html
 layout: home
 ---
 
-Welcome to the labs for *Develop your first agent with Microsoft Foundry*!
+Welcome to the lab for *Develop your first agent with Microsoft Foundry*!
 
-Complete the exercises below in order, to:
+To complete this lab, you need an Azure subscription and a local installation of Visual Studio Code. Use the **setup guide** to ensure you have everything in place before you start.
 
-1. Set up your environment
-1. Create an agent in the Microsoft Foundry portal.
-1. Extend your agent in Visual Studio Code
-1. Use your agent's endpont in a client application.
-
-> **No Azure Subscription?**<br>Microsoft Foundry is built on Microsoft Azure; so the exercises in this lab require an Azure subscription. If you don't have access to an Azure subscription, but you still want to explore key elements of agent development, you can check out the alternative ***[Explore agent concepts](/Instructions/fallback/99-fallback-lab.md)*** lab; which uses apps with large language models that run locally in your browser - no Azure subscription required!
+> **No Azure Subscription?**<br>Microsoft Foundry is built on Microsoft Azure; so the exercises in this lab require an Azure subscription. If you don't have access to an Azure subscription, but you still want to explore key elements of agent development, you can check out the alternative ***Explore agent concepts*** lab; which uses apps with large language models that run locally in your browser - no Azure subscription required!
 
 ## Exercises
 
