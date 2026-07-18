@@ -178,13 +178,13 @@ The Foundry Toolkit extension for Visual Studio Code brings the assets in your F
 
 1. In the Foundry Toolkit pane, expand **My Resources** and set the default project by connecting to Azure (signing in with your credentials) and selecting the Foundry project you created previously.
 
-    > **Tip**: If you did not complete the previous exercise, use the extension to sign into Azure and create a new project.
+    > **Tip**: If you did not complete the previous tasks, use the extension to sign into Azure and create a new project.
 
 ### Connect to your agent
 
 Now that you have a connection to your Foundry project, you can access the assets you've created in it - including the *computing-historian* agent you created in the previous exercise.
 
-> **Tip**: If you didn't complete the previous exercise, or have deleted your *computing-history* agent, use the **+** icon for the **Prompt agents** node to create a new agent named `computing-history` based on the *gpt-5-mini* model with the instructions `You are an expert in the history of computing and AI.` and add the *Web search* tool.
+> **Tip**: If you didn't complete the previous tasks, or have deleted your *computing-history* agent, use the **+** icon for the **Prompt agents** node to create a new agent named `computing-history` based on the *gpt-5-mini* model with the instructions `You are an expert in the history of computing and AI.` and add the *Web search* tool.
 
 1. In the Foundry Toolkit pane, under your project, select **Agents** and on the **Prompt agents** tab, select the **computing-historian** agent you created previously.
 
