@@ -1,13 +1,13 @@
 ---
 lab:
-  title: Alternative lab - Explore agent concepts
+  title: Alternative lab - Explore AI agent concepts
   description: No cloud subscription? Explore key agent development concepts in your browser.
   level: 100
   duration: 30 minutes
   islab: true
 ---
 
-# Explore agent concepts
+# Explore AI agent concepts
 
 If you don't have access to an Azure subscription, but you want to get hands-on with some key elements of agent development; this exercise is for you!
 
