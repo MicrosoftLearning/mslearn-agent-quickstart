@@ -64,7 +64,7 @@ To chat with the model, we'll use an interactive *chat playground* that provides
 
     ![Screenshot of the chat playground app with a response.](./media/chat-playground-response.png)
 
-    Generative AI chat applications often include chat history in the prompt; so the context of the conversation is retained between messages (for example, in the follow-up prompt `Tell me more about her work with Charles Babbage.`, "her" is interpreted as referring to Ada Lovelace)
+    Generative AI chat applications often include chat history in the prompt; so the context of the conversation is retained between messages (for example, in the follow-up prompt *Tell me more about her work with Charles Babbage*, "her" is interpreted as referring to Ada Lovelace)
 
     > **Note**: In *Basic* mode, the conversation history is not retained; so the follow up prompt results in a new Wikipedia query based on the keywords "Charles Babbage".
 
