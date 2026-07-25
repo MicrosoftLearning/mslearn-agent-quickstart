@@ -11,13 +11,24 @@ lab:
 
 If you don't have access to an Azure subscription, but you want to get hands-on with some key elements of agent development; this exercise is for you!
 
-In this exercise, you'll use real large language models that run locally in your browser to explore how AI agents work and can be used to power intelligent solutions.
+![Image of Anton.](./media/anton-icon.png)<br/>**Hi, I'm Anton.**<br/>I'll be here to help you with hints and tips as you work through this lab; in which you'll use real large language models that run locally in your browser to explore how AI agents work and can be used to power intelligent solutions.
 
-> **Note**: The apps used in this lab are provided solely for educational purposes. They are <u>not</u> supported Microsoft products or services, and should not be relied on for critical work.
+If you want more interactive help, you can chat with me in the *[Ask Anton](https://aka.ms/choose-anton){:target="_blank"}* app.
 
-To complete this exercise, you need a modern browser on a computer with sufficient hardware resources to load and run the models. On older or low-spec computers, the apps may run very slowly or experience errors.
+<details>
+<strong><i><a href="https://aka.ms/choose-anton" target="_blank">Ask Anton</a></i></strong> is a generative AI agent that can answer questions about AI concepts and Microsoft Foundry technologies. It's available in two versions at <code>https://aka.ms/choose-anton</code>:
+<ul>
+<li><strong>Azure-based</strong>: Best experience <i>(requires an Azure subscription and deployment of a model in a Foundry project)</i>.</li>
+<li><strong>Browser-based</strong>: Use a small language model in your browser <i>(reduced functionality - may be slow or work only in "basic" mode in older/lower-spec devices)</i>.</li>
+</ul>
+<blockquote><i>Ask Anton is <u>not</u> a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator.</i>
+</blockquote>
+</details>
+<hr/>
 
-> **Minimum recommended spec**<br>
+To complete this lab, you need a modern browser on a computer with sufficient hardware resources to load and run the models used by the AI agent app. On older or low-spec computers, the app may run very slowly or experience errors.
+
+> **Minimum spec**<br/>If your computer does not meet these requirements, the AI model may not run successfully. However, the app does support a failsafe *Basic* mode in which no model is used; which provides simpler, but faster responses.<br/>
 >
 > - 64-bit CPU, 8 cores
 > - GPU (recommended)
@@ -25,8 +36,6 @@ To complete this exercise, you need a modern browser on a computer with sufficie
 > - Enough storage to cache ~300MB–800MB model assets
 > - Latest Chrome / Edge / Firefox with WASM SIMD enabled/available (WebGPU support is recommended; a WASM-based fallback is provided)
 > - Audio hardware (mic and speaker) required for speech functionality
-
-If your computer does not meet these requirements, the AI models may not run successfully. However, the apps do support a failsafe "Basic" mode in which no model is used; which you may be able to use.
 
 This exercise should take approximately **30** minutes to complete.
 
@@ -41,23 +50,23 @@ To chat with the model, we'll use an interactive *chat playground* that provides
 1. In a web browser, open the **[Chat Playground](https://aka.ms/chat-playground){:target="_blank"}** at `https://aka.ms/chat-playground`.
 1. Wait for the model to download and initialize.
 
-    > **Tip**: The first time you download a model, it may take a few minutes. Subsequent downloads will be faster.<br><br>If the model is taking a long time to load, you can cancel and start in basic mode. You can switch between available models at any time in the *Model* list.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: The first time you download a model, it may take a few minutes. Subsequent downloads will be faster.<br><br>If the model is taking a long time to load, you can cancel and start in basic mode. You can switch between available models at any time in the *Model* list.
 
 1. When the model is ready, review the playground interface, which should look similar to this.
 
     ![Screenshot of the chat playground app.](./media/chat-playground.png)
 
-    > **Tip**: You can switch between *light* and *dark* themes using the &#x263C; / &#x263E; toggle at the top right.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: You can switch between *light* and *dark* themes using the &#x263C; / &#x263E; toggle at the top right.
 
-1. In the **Chat** pane, enter a prompt such as `Who was Ada Lovelace?`, and review the response.
-
-    > **Note**: Depending on the spec of your computer, and the model/mode selected in the app, the response may some time to be returned.
+1. In the **Chat** pane, enter a prompt such as `Who was Ada Lovelace?`, and review the response (which may take some time to be generated).
 
 1. Enter a follow-up prompt, such as `Tell me more about her work with Charles Babbage.` and review the response.
 
     ![Screenshot of the chat playground app with a response.](./media/chat-playground-response.png)
 
-    >**Note**: Generative AI chat applications often include chat history in the prompt; so the context of the conversation is retained between messages (for example, in the follow-up prompt `Tell me more about her work with Charles Babbage.`, "her" is interpreted as referring to Ada Lovelace).<br><br>In *Basic* mode, the conversation history is not retained; so the follow up prompt results in a new Wikipedia query based on the keywords "Charles Babbage".
+    Generative AI chat applications often include chat history in the prompt; so the context of the conversation is retained between messages (for example, in the follow-up prompt `Tell me more about her work with Charles Babbage.`, "her" is interpreted as referring to Ada Lovelace)
+
+    > **Note**: In *Basic* mode, the conversation history is not retained; so the follow up prompt results in a new Wikipedia query based on the keywords "Charles Babbage".
 
 1. At the top-right of the chat pane, use the **New chat** (💬) button to restart the conversation. This removes all conversation history.
 1. Enter a new prompt, such as `Tell me about the ELIZA chatbot.` and view the response.
@@ -98,11 +107,13 @@ One of the most commonly used application programming interfaces (APIs) used to 
 
 1. Navigate away from the Chat Playground app to the **[Model Coder](https://aka.ms/model-coder){:target="_blank"}** app at `https://aka.ms/model-coder` and wait for the Python environment and model to load.
 
-    > **Note**: As with the chat playground, the first time the model is loaded it may take a minute or so. <br><br>If the model is taking a long time to load, you can cancel and start in basic mode. You can switch between available models at any time in the *Mode* list.
+    As with the chat playground, the first time the model is loaded it may take a minute or so.
+
+    > ![Image of Anton.](./media/anton-icon.png)<br>**Tip**: If the model is taking a long time to load, you can cancel and start in basic mode. You can switch between available models at any time in the **Mode** list.
 
     ![Screenshot of Model Coder](./media/model-coder.png)
 
-    > **Tip**: You can switch between *light* and *dark* themes using the &#9681; icon at the top right.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: You can switch between *light* and *dark* themes using the &#9681; icon at the top right.
 
     This app provides an in-browser sandbox with a Python library that encapsulates the most common classes in the OpenAI SDK. You'll use it to write and run real Python code that submits prompts to a local LLM running in the browser.
 
@@ -168,7 +179,7 @@ One of the most commonly used application programming interfaces (APIs) used to 
 
     ![Screenshot of Model Coder with code running.](./media/model-coder-response.png)
 
-    > **Note**: The model used in this app is a small language model with limited training data and a small context window. Responses may not be accurate. However, the point of the exercise is to explore the OpenAI SDK syntax to submit prompts and receive responses.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: The model used in this app is a small language model with limited training data and a small context window. Responses may not be accurate. However, the point of the exercise is to explore the OpenAI SDK syntax to submit prompts and receive responses.
 
     When you're finished, enter `quit`.
 
@@ -178,7 +189,7 @@ Now that you've explored the fundamental building blocks of how agent's are buil
 
 1. Navigate away from the Model Coder app to the **[Computing History agent](https://aka.ms/computing-history-browser){:target="_blank"}** at `https://aka.ms/computing-history-browser`.
 
-    > **Note**: If your browser supports WebGPU, the Computing History Agent uses the *Microsoft Phi 3.5 Mini* model running on your computer's GPU. If not, the model run on CPU - with reduced response-generation quality. If *that* fails, a basic mode with no model and responses retrieved from Wikipedia is activated. Performance may vary depending on the available memory in your computer and your network bandwidth to download the model.<br><br>When the model is used on older or low-spec devices, you may experience slow performance. If this happens, switch to *Basic* mode.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: If your browser supports WebGPU, the Computing History Agent uses the *Microsoft Phi 3.5 Mini* model running on your computer's GPU. If not, the model run on CPU - with reduced response-generation quality. If *that* fails, a basic mode with no model and responses retrieved from Wikipedia is activated. Performance may vary depending on the available memory in your computer and your network bandwidth to download the model.<br><br>When the model is used on older or low-spec devices, you may experience slow performance. If this happens, switch to *Basic* mode.
 
     After loading, the application should look similar to this:
 
@@ -196,7 +207,7 @@ Now that you've explored the fundamental building blocks of how agent's are buil
 
 In this exercise, you explored key elements of AI agents, including large language models, instructions, tools, and client applications.
 
-> **[Ask Anton](https://aka.ms/ask-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this exercise, *[Ask Anton](https://aka.ms/ask-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just a sample AI agent for you to explore as you learn about what's possible with AI.*<br/><br/>If you *do* check out Ask Anton, we'd love you to *[tell us about your experience with the app](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}*!
+> ![Anton avatar.](./media/anton-icon.png)<br/>If you used the [*Ask Anton*](https://aka.ms/choose-anton){:target="_blank"} app during this lab, we'd love you to [tell us about your experience with it](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}!
 
 ## Next steps
 

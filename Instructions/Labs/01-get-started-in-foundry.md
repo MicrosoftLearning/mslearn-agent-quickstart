@@ -9,7 +9,22 @@ lab:
 
 # Develop your first AI agent in Microsoft Foundry
 
-In this lab, you'll use Microsoft Foundry to develop an AI agent that provides information and expertise on the history of computing.
+![Image of Anton.](./media/anton-icon.png)<br/>**Hi, I'm Anton.**<br/>I'll be here to help you with hints and tips as you work through this lab; in which you'll use Microsoft Foundry to develop an AI agent that provides information and expertise on the history of computing.
+
+If you want more interactive help, you can chat with me in the *[Ask Anton](https://aka.ms/choose-anton){:target="_blank"}* app.
+
+<details>
+<strong><i><a href="https://aka.ms/choose-anton" target="_blank">Ask Anton</a></i></strong> is a generative AI agent that can answer questions about AI concepts and Microsoft Foundry technologies. It's available in two versions at <code>https://aka.ms/choose-anton</code>:
+<ul>
+<li><strong>Azure-based</strong>: Best experience <i>(requires an Azure subscription and deployment of a model in a Foundry project)</i>.</li>
+<li><strong>Browser-based</strong>: Use a small language model in your browser <i>(reduced functionality - may be slow or work only in "basic" mode in older/lower-spec devices)</i>.</li>
+</ul>
+<blockquote><i>Ask Anton is <u>not</u> a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator.</i>
+</blockquote>
+</details>
+<hr/>
+
+This exercise should take approximately **20** minutes to complete.
 
 > **Note**: Many components of Microsoft Foundry, including the Microsoft Foundry portal, are subject to continual development. This reflects the fast-moving nature of artificial intelligence technology. Some elements of your user experience may differ from the images and descriptions in this exercise!
 
@@ -27,7 +42,7 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
     - **Resource group**: *Create or select a resource group*
     - **Region**: Select any of the **AI Foundry recommended** regions in [this list](https://learn.microsoft.com/azure/foundry/openai/how-to/responses#region-availability){:target="_blank"}
 
-    > **Note**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
 
 1. Wait for your project to be created. It may take a few minutes. Then close any welcome dialogs that are displayed.
 
@@ -51,7 +66,7 @@ At the heart of every AI agent, there's a large language model (LLM). Let's find
 
 1. Use the **Deploy** button to deploy the model using the default settings. Deployment may take a minute or so.
 
-    > **Tip**: Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different *gpt* chat-capable model - such as *gpt-5-nano*, or *gpt-5.4-mini*. Alternatively, you can create a new project in a different region.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different *gpt* chat-capable model - such as *gpt-5-nano*, or *gpt-5.4-mini*. Alternatively, you can create a new project in a different region.
 
 1. When the model has been deployed, view the model playground page that is opened, in which you can chat with the model.
 
@@ -68,7 +83,7 @@ You can use the playground to explore the model by chatting with it.
 
 1. Enter a follow-up prompt, such as `Tell me more about her work with Charles Babbage.` and review the response.
 
-    > **Note**: Generative AI chat applications often include the conversation history in the prompt; so the context of the conversation is retained between messages. In this case, "her" is interpreted as referring to Ada Lovelace.
+    Generative AI chat applications often include the conversation history in the prompt; so the context of the conversation is retained between messages. In this case, "her" is interpreted as referring to Ada Lovelace.
 
 1. At the top-right of the chat pane, use the **New chat** button to restart the conversation. This removes all conversation history.
 1. Enter a new prompt, such as `Tell me about the ELIZA chatbot.` and view the response.
@@ -178,13 +193,9 @@ The Foundry Toolkit extension for Visual Studio Code brings the assets in your F
 
 1. In the Foundry Toolkit pane, expand **My Resources** and set the default project by connecting to Azure (signing in with your credentials) and selecting the Foundry project you created previously.
 
-    > **Tip**: If you did not complete the previous tasks, use the extension to sign into Azure and create a new project.
-
 ### Connect to your agent
 
-Now that you have a connection to your Foundry project, you can access the assets you've created in it - including the *computing-historian* agent you created in the previous exercise.
-
-> **Tip**: If you didn't complete the previous tasks, or have deleted your *computing-history* agent, use the **+** icon for the **Prompt agents** node to create a new agent named `computing-history` based on the *gpt-5-mini* model with the instructions `You are an expert in the history of computing and AI.` and add the *Web search* tool.
+Now that you have a connection to your Foundry project, you can access the assets you've created in it - including the *computing-historian* agent you created previously.
 
 1. In the Foundry Toolkit pane, under your project, select **Agents** and on the **Prompt agents** tab, select the **computing-historian** agent you created previously.
 
@@ -272,17 +283,17 @@ While you can use the graphical interface in the Foundry Portal and the Foundry 
 
 1. On the **Extensions** page, if it is not already installed, install the **Python** extension. Then, in the **Command Palette (Ctrl+Shift+P)**, use the command `python:create environment` (or `python:select interpreter`) to create a new *Venv* environment based on your Python 3.1x installation.
 
-    > **Tip**: You can choose to install the workspace dependencies in the *requirements.txt* file as you create the environment. Don't worry of you accidentally skip this though; we'll do it in a later step anyway.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: You can choose to install the workspace dependencies in the *requirements.txt* file as you create the environment. Don't worry of you accidentally skip this though; we'll do it in a later step anyway.
 
     When you have created the Python environment, a folder mamed **.venv** will be added to the workspace (not to be confused with the *.env* file, which contains environment variables for the program)
 
 1. In the **Explorer** pane, right-click the **run_agent.py** file, and select **Open in integrated terminal**.
 
-    > **Note**: Opening the terminal in Visual Studio Code should automatically activate the Python environment after a few seconds. If you're using a PowerShell terminal, you may need to enable running scripts on your system (see [Set-ExecutionPolicy](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy){:target="_blank"}). If for any reason the Python environment is not activated automatically, you can use [this query](https://www.bing.com/search?q=%22How%20do%20I%20activate%20a%20Python%20venv%22){:target="_blank"} to search for information on how to activate it in your environment.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Opening the terminal in Visual Studio Code should automatically activate the Python environment after a few seconds. If you're using a PowerShell terminal, you may need to enable running scripts on your system (see [Set-ExecutionPolicy](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy){:target="_blank"}). If for any reason the Python environment is not activated automatically, you can use [this query](https://www.bing.com/search?q=%22How%20do%20I%20activate%20a%20Python%20venv%22){:target="_blank"} to search for information on how to activate it in your environment.
 
 1. Ensure that the terminal is open in the **computinghistorian** folder with the prefix **(.venv)** to indicate that the Python environment you created is active.
 
-    > **Tip**: You can enter the command `cls` to clear the console pane - which may make it easier to focus on the outputs from commands as you run them.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: You can enter the command `cls` to clear the console pane - which may make it easier to focus on the outputs from commands as you run them.
 
 1. Install the required dependencies by running the following command:
 
@@ -298,7 +309,7 @@ While you can use the graphical interface in the Foundry Portal and the Foundry 
    az login
     ```
 
-    > **Note**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
 
 1. When prompted, follow the instructions to sign into Azure. Then complete the sign in process in the command line, viewing (and confirming if necessary) the details of the subscription containing your Foundry resource.
 1. After you have signed in, enter the following command to run the application:
@@ -315,7 +326,7 @@ While you can use the graphical interface in the Foundry Portal and the Foundry 
 
 GitHub Copilot provides agentic AI assistance in Visual Studio Code, helping you develop applications more efficiently.
 
-> **Note**: GitHub Copilot in Visual Studio Code requires that you are signed in using a GitHub account. While agentic assistance is available in all GitHub plans, including free accounts, there are usage limitations.
+> ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: GitHub Copilot in Visual Studio Code requires that you are signed in using a GitHub account. While agentic assistance is available in all GitHub plans, including free accounts, there are usage limitations.
 
 1. In Visual Studio Code, in the **Extensions** pane, ensure that the **GitHub Copilot Chat** extension is installed and enabled.
 1. At the bottom of the activity bar on the left, select **Accounts** and ensure that you are signed into your GitHub account. If not, sign in to use AI features.
@@ -369,7 +380,7 @@ A partially completed client application for your agent has been provided. You'l
 1. View the **Extensions** pane; and if it is not already installed, install the **Python** extension.
 1. In the **Command Palette**, use the command `python:create envionment`(or `python:select interpreter`) to create a new **Venv** environment based on your Python 3.1x installation.
 
-    > **Tip**: If you are prompted to install dependencies, you can install the ones in the *requirements.txt* file in the */computer-history-client* folder; but it's OK if you don't - we'll install them later!
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Just like before, if you are prompted to install dependencies, you can install the ones in the *requirements.txt* file in the */computer-history-client* folder; but it's OK if you don't - we'll install them later!
 
     Wait for the environment to be created.
 
@@ -380,9 +391,6 @@ A partially completed client application for your agent has been provided. You'l
     - **README.md** (information about the app)
     - **requirements.txt** (the Python package dependencies that need to be installed)
 1. In the **Explorer** pane, right-click the **agent_client.py** file, and select **Open in integrated terminal**.
-
-    > **Note**: Opening the terminal in Visual Studio Code should automatically activate the Python environment after a few seconds. If you're using a PowerShell terminal, you may need to enable running scripts on your system (see [Set-ExecutionPolicy](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy){:target="_blank"}). If for any reason the Python environment is not activated automatically, you can use GitHub Copilot to help you activate it.
-
 1. Ensure that the terminal is open in the **/computer-history-client** folder with the prefix **(.venv)** to indicate that the Python environment you created is active.
 1. Install the required Python packages by running the following command:
 
@@ -401,7 +409,7 @@ Now you're ready to implement the code that will submit prompts to your agent.
 1. In the **Explorer** pane, in the **/computer-history-client** folder, select the **agent_client.py** file (<u>not</u> *app.py*) to open it.
 1. Review the existing code. You will add code to use the OpenAI Response API to interact with your agent.
 
-    > **Tip**: As you add code to the code file, be sure to maintain the correct indentation.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: As you add code to the code file, be sure to maintain the correct indentation.
 
 1. Find the comment **Import Azure Identity and OpenAI client libraries**, and add the following code to import the Azure Identity classes required to use Entra ID authentication, and the OpenAI library.
 
@@ -448,8 +456,6 @@ Now you're ready to test the app with your agent.
    az login
     ```
 
-    > **Note**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
-
 1. When prompted, follow the instructions to sign into Azure. Then complete the sign in process in the command line, viewing (and confirming if necessary) the details of the subscription containing your Foundry resource.
 1. After you have signed in, enter the following command to run the application:
 
@@ -475,9 +481,9 @@ Now you're ready to test the app with your agent.
 
 In this exercise, you built a client application that uses an agent you developed in Microsoft Foundry.
 
-> **[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}**<br/>![Anton avatar.](./media/anton-icon.png)<br/>If you have questions about some of the topics covered in this lab, *[Ask Anton](https://aka.ms/azk-anton){:target="_blank"}* is a generative AI-based agent that you can ask about AI concepts and Microsoft Foundry. Open the app at **[https://aka.ms/azk-anton](https://aka.ms/azk-anton){:target="_blank"}** and use the **Configure** button to enter your Foundry project and model details.<br/><br/>*Ask Anton is not a supported Microsoft product or a component of Microsoft Learn or AI Skills Navigator. Just an example of an AI agent for you to explore as you learn about what's possible with AI.*<br/><br/>If you *do* check out Ask Anton, we'd love you to *[tell us about your experience](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}*!
-
 If you have finished exploring Microsoft Foundry, you should delete the Azure resources created in this lab to avoid unnecessary utilization charges.
+
+> ![Anton avatar.](./media/anton-icon.png)<br/>If you used the [*Ask Anton*](https://aka.ms/choose-anton){:target="_blank"} app during this lab, we'd love you to [tell us about your experience with it](https://forms.office.com/r/fC0ndfBQeK){:target="_blank"}!
 
 ## Next steps
 
