@@ -266,7 +266,7 @@ While you can use the graphical interface in the Foundry Portal and the Foundry 
     
             print("\n--- All tasks completed successfully ---")
     
-    if **name** == "**main**":
+    if __name__ == "__main__":
         try:
             asyncio.run(main())
         except KeyboardInterrupt:
