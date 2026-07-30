@@ -3,7 +3,7 @@ lab:
   title: Develop your first AI agent in Microsoft Foundry
   description: Use Microsoft Foundry and Visual Studio Code to create an agent.
   level: 200
-  duration: 60 minutes
+  duration: 40
   islab: true
 ---
 
@@ -24,7 +24,7 @@ If you want more interactive help, you can chat with me in the *[Ask Anton](http
 </details>
 <hr/>
 
-This exercise should take approximately **20** minutes to complete.
+This exercise should take approximately **40** minutes to complete.
 
 > **Note**: Many components of Microsoft Foundry, including the Microsoft Foundry portal, are subject to continual development. This reflects the fast-moving nature of artificial intelligence technology. Some elements of your user experience may differ from the images and descriptions in this exercise!
 
