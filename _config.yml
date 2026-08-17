@@ -1,4 +1,4 @@
-remote_theme: MicrosoftLearning/Jekyll-Theme
+remote_theme: MicrosoftLearning/Jekyll-Theme@cae1f495e2f7e3bbaa8631757b1f3123e8faecfc
 exclude:
   - readme.md
   - .github/

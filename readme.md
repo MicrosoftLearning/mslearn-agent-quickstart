@@ -7,4 +7,3 @@ For the best experience, view the labs in the [*GitHub Pages* site](https://micr
 > **Note**: The labs in this repo require an Azure subscription.
 
 If you encounter any problems when completing the labs in this repo, please submit an [issue](../../issues).
-
