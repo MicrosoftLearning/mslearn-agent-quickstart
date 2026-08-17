@@ -28,8 +28,6 @@ This exercise should take approximately **40** minutes to complete.
 
 > **Note**: Many components of Microsoft Foundry, including the Microsoft Foundry portal, are subject to continual development. This reflects the fast-moving nature of artificial intelligence technology. Some elements of your user experience may differ from the images and descriptions in this exercise!
 
-This lab should take approximately **60** minutes to complete.
-
 ## Create an agent in the Microsoft Foundry portal
 
 Microsoft Foundry uses *projects* to organize models, resources, data, and other assets used to develop an AI solution.
@@ -301,7 +299,7 @@ While you can use the graphical interface in the Foundry Portal and the Foundry 
    pip install agent-framework==1.10.0
     ```
 
-    **Note**: This may be a different version from the one referenced in the same code and requirements.txt file.
+    **Note**: This may be a different version from the one referenced in the sample code and requirements.txt file.
 
 1. After the libraries are installed (which may take a minute or so), use the following command to sign into Azure.
 
