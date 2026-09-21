@@ -308,8 +308,6 @@ GitHub Copilot provides agentic AI assistance in Visual Studio Code, helping you
 
 1. At the bottom of the activity bar on the left, select **Accounts** and ensure that you are signed into your GitHub account. If not, sign in to use AI features.
 
-    If you have a GitHub Enterprise account, select **Continue with GHE**.
-
 1. If the chat pane is not already visible on the right, on the toolbar, next to the search box, use the **Toggle Chat** button to open it.
 
     ![Screenshot of GitHub Copilot in Visual Studio Code.](./media/github-copilot-chat.png)
