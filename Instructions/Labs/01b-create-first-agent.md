@@ -34,7 +34,11 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and start building; signing in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
 
-1. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option. Then, if prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
+1. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option.
+
+    A default Foundry project may have already been created for you. If not, you may be prompted to create one.
+
+1. If prompted, create a new project with a unique name; expanding the  **Advanced options** area to specify the following settings for your project:
     - **Foundry resource**: *A valid name for your Foundry resource.*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
@@ -42,7 +46,7 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
     > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Depending on your permissions in the Azure subscription, you may need to clear the option to set up recommended resources.
 
-1. Wait for your project to be created. It may take a few minutes. Then close any welcome dialogs that are displayed.
+    Wait for your project to be created. It may take a few minutes. Then close any welcome dialogs that are displayed.
 
     After creating or selecting a project in the new Foundry portal, it should open in a page similar to the following image:
 
@@ -62,7 +66,7 @@ At the heart of every AI agent, there's a large language model (LLM). Let's find
 
     ![Screenshot of the gpt-5-mini model page.](./media/gpt-5-mini.png)
 
-1. Use the **Deploy** button to deploy the model using the default settings. Deployment may take a minute or so.
+1. Use the **Deploy** (or **Custom Deploy**) button to deploy the model using the default settings. Deployment may take a minute or so.
 
     > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: Model deployments are subject to regional quotas. If you don't have enough quota to deploy the model in your project's region, you can use a different *gpt* chat-capable model - such as *gpt-5-nano*, or *gpt-5.4-mini*. Alternatively, you can create a new project in a different region.
 
@@ -302,7 +306,6 @@ GitHub Copilot provides agentic AI assistance in Visual Studio Code, helping you
 
 > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: GitHub Copilot in Visual Studio Code requires that you are signed in using a GitHub account. While agentic assistance is available in all GitHub plans, including free accounts, there are usage limitations.
 
-1. In Visual Studio Code, in the **Extensions** pane, ensure that the **GitHub Copilot Chat** extension is installed and enabled.
 1. At the bottom of the activity bar on the left, select **Accounts** and ensure that you are signed into your GitHub account. If not, sign in to use AI features.
 1. On the toolbar, next to the search box, use the **Toggle Chat** button to show the chat pane on the right.
 
