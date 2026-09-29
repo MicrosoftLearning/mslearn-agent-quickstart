@@ -201,7 +201,7 @@ A partially completed client application for your agent has been provided. You'l
 1. In the Activity bar on the left edge, view the **Extensions** pane; and if it is not already installed, search for and install the **Python** extension.
 1. In the **Command Palette**, use the command `python:create envionment`(or `python:select interpreter`) to create a new **Venv** environment based on your Python 3.1x installation.
 
-    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: You can choose to install the workspace dependencies in the *requirements.txt* file as you create the environment. Don't worry of you accidentally skip this though; we'll do it in a later step anyway.
+    > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: You can choose to install the workspace dependencies in the *requirements.txt* file as you create the environment. Don't worry if you accidentally skip this though; we'll do it in a later step anyway.
 
     Wait for the environment to be created. It may take a while, and some notifications may be displayed during the process.
 
