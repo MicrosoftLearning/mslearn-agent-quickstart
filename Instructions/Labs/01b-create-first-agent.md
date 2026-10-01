@@ -196,7 +196,7 @@ A partially completed client application for your agent has been provided. You'l
 1. Open the command palette (*Ctrl+Shift+P* or on the **View** menu, select **Command Palette**) and enter the `Git:clone` command to clone the `https://github.com/MicrosoftLearning/mslearn-agent-quickstart` repo to a local folder (it doesn't matter which one).
 1. After the clone operation is complete, open the folder when prompted.
 
-    You may be prompted to confirm you trust the authors.
+    The folder may open in **Restricted mode**. If so, select the mode and trust the authors to allow full functionality..
 
 1. In the Activity bar on the left edge, view the **Extensions** pane; and if it is not already installed, search for and install the **Python** extension.
 1. In the **Command Palette**, use the command `python:create envionment`(or `python:select interpreter`) to create a new **Venv** environment based on your Python 3.1x installation.
