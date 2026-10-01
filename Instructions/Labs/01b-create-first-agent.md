@@ -89,7 +89,7 @@ You can use the playground to explore the model by chatting with it.
 
 1. At the top-right of the chat pane, use the **New chat** button to restart the conversation. This removes all conversation history.
 1. Enter a new prompt, such as `Tell me about the ELIZA chatbot.` and view the response.
-1. Continue the conversation with prompts such as `How does it compare with modern LLMs?`.
+1. Continue the conversation with prompts such as `How does ELIZA compare with modern LLMs?`.
 
 ### Specify instructions in a *system prompt*
 
