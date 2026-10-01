@@ -199,7 +199,7 @@ A partially completed client application for your agent has been provided. You'l
     The folder may open in **Restricted mode**. If so, select the mode and trust the authors to allow full functionality..
 
 1. In the Activity bar on the left edge, view the **Extensions** pane; and if it is not already installed, search for and install the **Python** extension.
-1. In the **Command Palette**, use the command `python:create envionment`(or `python:select interpreter`) to create a new **Venv** environment based on your Python 3.1x installation.
+1. In the **Command Palette**, use the command `python:select interpreter` to create a new **Venv** environment based on your Python 3.1x installation.
 
     > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: You can choose to install the workspace dependencies in the *requirements.txt* file as you create the environment. Don't worry if you accidentally skip this though; we'll do it in a later step anyway.
 
@@ -306,7 +306,7 @@ GitHub Copilot provides agentic AI assistance in Visual Studio Code, helping you
 
 > ![Image of Anton.](./media/anton-icon.png)<br/>**Tip**: GitHub Copilot in Visual Studio Code requires that you are signed in using a GitHub account. While agentic assistance is available in all GitHub plans, including free accounts, there are usage limitations.
 
-1. At the bottom of the activity bar on the left, select **Accounts** and ensure that you are signed into your GitHub account. If not, sign in to use AI features.
+1. At the bottom of the activity bar on the left, select **Accounts** and ensure that you are signed into your GitHub account. If not, sign in to use GitHub Copilot and authorize Visual Studio Code.
 
 1. If the chat pane is not already visible on the right, on the toolbar, next to the search box, use the **Toggle Chat** button to open it.
 
