@@ -34,7 +34,7 @@ Microsoft Foundry uses *projects* to organize models, resources, data, and other
 
 1. In a web browser, open [Microsoft Foundry](https://ai.azure.com){:target="_blank"} at `https://ai.azure.com` and start building; signing in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page.
 
-1. If it is not already enabled, in the tool bar the top of the page, enable the **New Foundry** option.
+1. If it is not already enabled, in the toolbar at the top of the page, enable the **New Foundry** option.
 
     A default Foundry project may have already been created for you. If not, you may be prompted to create one.
 
