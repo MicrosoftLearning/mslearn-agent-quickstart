@@ -330,7 +330,7 @@ GitHub Copilot provides agentic AI assistance in Visual Studio Code, helping you
 
     Eventually the changes will be staged, ready for you to test.
 
-1. View the agent-client.py file in Visual Studio code to see the changes made by GitHib Copilot.
+1. View the agent-client.py file in Visual Studio code to see the changes made by GitHub Copilot.
 
     ![Screenshot of GitHub Copilot in Visual Studio Code.](./media/github-copilot-edits.png)
 
