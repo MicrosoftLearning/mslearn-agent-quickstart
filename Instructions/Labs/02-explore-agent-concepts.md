@@ -203,6 +203,31 @@ Now that you've explored the fundamental building blocks of how agent's are buil
 
     Your agent should use its knowledge and tools to provide useful information and insights into computing history related topics.
 
+1. In a new browser tab, download **[computers.zip](https://aka.ms/computer-images){:target="_blank"}** from `https://aka.ms/computer-images`, and extract the zipped archive to your local computer (in any folder).
+1. Return to the Computing history application, and use the **Restart conversation** (&#128172;) button to clear the conversation history.
+1. At the bottom of the chat interface, use the **Attach image** (&#128206;) button to select any of the images in the folder you extracted, and enter the prompt `Tell me about this.`
+
+    Review the response. Hopefully the model recognized the computer in the image.
+
+   ![Screenshot of the Computing History image analysis response.](./media/computing-history-vision.png)
+
+1. Try attaching a different image with the prompt `And this?`
+1. Try all of the images in the extracted folder. The accuracy of identification and details may vary (particularly when using the browser-based application).
+
+    > The app uses a custom image classification model based on MobileNetV2 to predict the image contents, and then submits the predicted class to the generative AI model to generate a summary of information about it.
+
+    **Suggestions for other prompts to try:**
+
+    Use Bing to find and download images of computers (and other items), and try asking the Computing History application to identify them. The image classification model in the browser-based app is trained to recognize the following objects:
+
+    - Altair 8800
+    - Apple II
+    - Commodore 64
+    - Sinclair ZX Spectrum
+    - Other unidentified computers
+    - Non-computers
+    - Printed circuit boards (PCBs)
+
 ## Summary
 
 In this exercise, you explored key elements of AI agents, including large language models, instructions, tools, and client applications.
